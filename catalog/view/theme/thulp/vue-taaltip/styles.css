@@ -1,0 +1,170 @@
+/* this id is development only */
+#taaltip-container {
+  min-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.taaltip-main {
+  font-size: 16px;
+}
+
+.taaltip-main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Bordkrijt';
+  src: url('Bordkrijt.woff2') format('woff2'),
+      url('Bordkrijt.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.krijt {
+  font-family: 'Bordkrijt', sans-serif;
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.2rem;
+}
+
+.krijt-klein {
+  font-family: 'Bordkrijt', sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.2rem;
+}
+
+.voorbeeldzin {
+  margin: 0 1.5rem 2.5rem;
+}
+
+.krijtbord {
+  display: block;
+  border-radius: 5px;
+  background: url("blackboard.jpg") no-repeat;
+  background-size: cover;
+  padding: 0.5rem 0;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.krijtlink {
+  margin: 2.5rem 0 2rem;
+  padding: 0.25rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.krijtlink:link, .krijtlink:visited, .krijtlink:active {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75); 
+  transition: color .2s linear; 
+}
+
+.krijtlink:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.95); 
+  transition: color .2s linear;
+}
+
+.social-icons {
+  margin-bottom: 2rem;
+}
+
+.social-taaltip {
+  margin: 0.25rem 0.5rem;
+}
+
+.social-taaltip:link, .social-taaltip:visited, .social-taaltip:active {
+  color: rgba(255, 255, 255, 0.3);
+  transition: color .3s ease-in;
+}
+
+.social-taaltip:hover {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color .3s ease-in;
+}
+
+.goed-fout {
+  display: inline-flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.goed-fout > span {
+  height: 0;
+}
+
+.fout{
+  opacity: 1;
+  animation-name: verdwijn;
+  animation-fill-mode: forwards;
+  animation-duration: 3.75s;
+  animation-delay: 0.25s;
+}
+
+@keyframes verdwijn {
+  0%   {opacity: 1; color: rgba(255, 255, 255, 0.85);}
+  20%  {opacity: 1; color: rgba(255, 96, 96, 0.85);}
+  40%  {opacity: 1; color: rgba(255, 255, 255, 0.85);}
+  50%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.goed{
+  opacity: 0;
+  animation-name: verschijn;
+  animation-fill-mode: forwards;
+  animation-delay: 3.5s;
+  animation-duration: 1.5s;
+}
+
+@keyframes verschijn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+.hints {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hints > li {
+  margin-bottom: 2rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  background-color: rgba(187, 255, 198, 0.35);
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  animation-name: verschijn;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  animation-duration: 1.5s;
+}
+
+.tip-item {
+  margin-bottom: 0.5rem;
+}
+
+.reflink:link, .reflink:visited, .reflink:active {
+  color: white;
+  background-color: rgb(157, 190, 201);
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+}
+
+.reflink:hover {
+  color: white;
+  background-color: rgb(159, 202, 216);
+  text-decoration: none;
+}
+
+.reflink::before {
+  content: "→ ";
+}
