@@ -1,0 +1,9 @@
+{
+  "_comment": "This JSON is required by codesandbox to initialize",
+  "name": "taaltip",
+  "version": "1.0.0",
+  "description": "Taaltip vue project (CDN)",
+  "main": "index.html",
+  "dependencies": {},
+  "keywords": []
+}
